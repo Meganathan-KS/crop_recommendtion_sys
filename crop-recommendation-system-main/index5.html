@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link rel="stylesheet" href="styes.css">
+  <style>
+    div{
+      padding:5px;
+      text-align:center;
+      font-size:50
+      
+      
+    }
+    body{
+        background-image: url("jai1.jpg");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+    }
+    h1{
+      color:red
+    }
+    input{
+      background-color:rgba(132, 216, 130, 0.863);
+      font-size:20px;
+      border-radius:5px;
+      border-width:2px;
+      padding:12px
+    }
+    button{
+      background-color:rgb(0, 26, 255);
+        font-size:20px;
+      border-radius:1px
+    }
+    h2{
+      color:blue
+  </style>
+  
+</head>
+
+<body>
+  
+ <div class="login">
+
+   <h1><i>CROP RECOMMENDATION SYSTEM</i></h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    
+    	<form action="https://crop-recommendation-system.herokuapp.com/predict"method="post">
+          <div>
+<input type="text" name="N" placeholder="enter nitrogen content" required="required" /><br>
+          </div>
+          <div>
+<input type="text" name="P" placeholder="enter phosphorus content" required="required" /><br>
+          </div>
+          <div>
+<input type="text" name="K" placeholder=" enter potassium content " required="required" /><br>
+          </div>
+          <div>
+<input type="text" name="temperature" placeholder="enter temperature" required="required" /><br>
+          </div>
+              <div>
+<input type="text" name="humidity" placeholder=" enter humidity" required="required" /><br>
+          </div>
+              <div>
+<input type="text" name="ph" placeholder=" enter PH level" required="required" /><br>
+          </div>
+            <div>
+<input type="text" name="rainfall" placeholder=" rainfall in mm" required="required" /><br>
+          </div>
+<footer>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+          </footer>
+  </form>
+
+   <br>
+   <br>
+
+
+
+
+
+</body>
+</html>  
